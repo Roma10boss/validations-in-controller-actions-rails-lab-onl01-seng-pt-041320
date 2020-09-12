@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post!, only: [:show, :edit, :update]
 
-  
+
   def show
   end
 
@@ -14,7 +14,7 @@ class PostsController < ApplicationController
     if @post.valid?
       @post.save
       redirect_to post_path(@post)
-    else 
+    else
       render :edit
     end
   end
